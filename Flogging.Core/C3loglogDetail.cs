@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Flogging.Core
+namespace C3logging.Core
 {
-    public class FlogDetail
+    public class C3loglogDetail
     {
         //public FlogDetail()
         //{

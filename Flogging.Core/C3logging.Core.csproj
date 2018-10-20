@@ -7,7 +7,7 @@
     <ProjectGuid>{FFA34582-FE56-422C-A45B-7C82F65E29E3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Flogging.Core</RootNamespace>
+    <RootNamespace>C3logging.Core</RootNamespace>
     <AssemblyName>Flogging.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -63,10 +63,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C3loglogDetail.cs" />
     <Compile Include="CustomException.cs" />
     <Compile Include="ExceptionHelper.cs" />
-    <Compile Include="FlogDetail.cs" />
-    <Compile Include="Flogger.cs" />
+    <Compile Include="C3logger.cs" />
     <Compile Include="PerfTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

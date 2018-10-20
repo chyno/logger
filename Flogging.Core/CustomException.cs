@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Flogging.Core
+namespace C3logging.Core
 {
     public class CustomException
     {

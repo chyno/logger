@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 
-namespace Flogging.Core
+namespace C3logging.Core
 {
     public class PerfTracker
     {
         private readonly Stopwatch _sw;
-        private readonly FlogDetail _infoToLog;
+        private readonly C3loglogDetail _infoToLog;
 
         public PerfTracker(string name, string userId, string userName,
                    string location, string product, string layer)
         {
             _sw = Stopwatch.StartNew();
-            _infoToLog = new FlogDetail()
+            _infoToLog = new C3loglogDetail()
             {
                 Message = name,
                 UserId = userId,
@@ -46,7 +46,7 @@ namespace Flogging.Core
         {
             _sw.Stop();
             _infoToLog.ElapsedMilliseconds = _sw.ElapsedMilliseconds;
-            Flogger.WritePerf(_infoToLog);
+            C3logger.WritePerf(_infoToLog);
         }
     }
 

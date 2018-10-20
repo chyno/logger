@@ -8,16 +8,16 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 
-namespace Flogging.Core
+namespace C3logging.Core
 {
-    public static class Flogger
+    public static class C3logger
     {
         private static readonly ILogger _perfLogger;
         private static readonly ILogger _usageLogger;
         private static readonly ILogger _errorLogger;
         private static readonly ILogger _diagnosticLogger;
 
-        static Flogger()
+        static C3logger()
         {
             // For SQL Server, add the Serilog.Sinks.MSSqlServer Nuget package -
             //    -- also needs to be included in any apps that 
@@ -102,9 +102,9 @@ namespace Flogging.Core
             return colOptions;
         }
 
-        public static void WritePerf(FlogDetail infoToLog)
+        public static void WritePerf(C3loglogDetail infoToLog)
         {
-            //_perfLogger.Write(LogEventLevel.Information, "{@FlogDetail}", infoToLog);
+            //_perfLogger.Write(LogEventLevel.Information, "{@C3oglogDetail}", infoToLog);
             _perfLogger.Write(LogEventLevel.Information,
                     "{Timestamp}{Message}{Layer}{Location}{Product}" +
                     "{CustomException}{ElapsedMilliseconds}{Exception}{Hostname}" +
@@ -118,9 +118,9 @@ namespace Flogging.Core
                     infoToLog.AdditionalInfo
                     );
         }
-        public static void WriteUsage(FlogDetail infoToLog)
+        public static void WriteUsage(C3loglogDetail infoToLog)
         {
-            //_usageLogger.Write(LogEventLevel.Information, "{@FlogDetail}", infoToLog);
+            //_usageLogger.Write(LogEventLevel.Information, "{@C3oglogDetail}", infoToLog);
             
             _usageLogger.Write(LogEventLevel.Information,
                     "{Timestamp}{Message}{Layer}{Location}{Product}" +
@@ -135,7 +135,7 @@ namespace Flogging.Core
                     infoToLog.AdditionalInfo
                     );
         }
-        public static void WriteError(FlogDetail infoToLog)
+        public static void WriteError(C3loglogDetail infoToLog)
         {
             if (infoToLog.Exception != null)
             {
@@ -143,7 +143,7 @@ namespace Flogging.Core
                 infoToLog.Location = string.IsNullOrEmpty(procName) ? infoToLog.Location : procName;
                 infoToLog.Message = GetMessageFromException(infoToLog.Exception);
             }
-            //_errorLogger.Write(LogEventLevel.Information, "{@FlogDetail}", infoToLog);            
+            //_errorLogger.Write(LogEventLevel.Information, "{@C3oglogDetail}", infoToLog);            
             _errorLogger.Write(LogEventLevel.Information,
                     "{Timestamp}{Message}{Layer}{Location}{Product}" +
                     "{CustomException}{ElapsedMilliseconds}{Exception}{Hostname}" +
@@ -157,13 +157,13 @@ namespace Flogging.Core
                     infoToLog.AdditionalInfo
                     );
         }
-        public static void WriteDiagnostic(FlogDetail infoToLog)
+        public static void WriteDiagnostic(C3loglogDetail infoToLog)
         {
             var writeDiagnostics = Convert.ToBoolean(ConfigurationManager.AppSettings["EnableDiagnostics"]);
             if (!writeDiagnostics)
                 return;
 
-            //_diagnosticLogger.Write(LogEventLevel.Information, "{@FlogDetail}", infoToLog);
+            //_diagnosticLogger.Write(LogEventLevel.Information, "{@C3oglogDetail}", infoToLog);
             _diagnosticLogger.Write(LogEventLevel.Information,
                     "{Timestamp}{Message}{Layer}{Location}{Product}" +
                     "{CustomException}{ElapsedMilliseconds}{Exception}{Hostname}" +
