@@ -17,7 +17,6 @@ namespace C3logging.Core
             _infoToLog = new C3loglogDetail()
             {
                 Message = name,
-                UserId = userId,
                 UserName = userName,
                 Timestamp = DateTime.Now,
                 Product = product,

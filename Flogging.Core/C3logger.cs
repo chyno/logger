@@ -113,7 +113,6 @@ namespace C3logging.Core
                     infoToLog.Layer, infoToLog.Location,
                     infoToLog.Product, infoToLog.CustomException,
                     infoToLog.ElapsedMilliseconds, infoToLog.Exception?.ToBetterString(),
-                    infoToLog.Hostname, infoToLog.UserId,
                     infoToLog.UserName, infoToLog.CorrelationId,
                     infoToLog.AdditionalInfo
                     );
@@ -130,7 +129,7 @@ namespace C3logging.Core
                     infoToLog.Layer, infoToLog.Location,
                     infoToLog.Product, infoToLog.CustomException,
                     infoToLog.ElapsedMilliseconds, infoToLog.Exception?.ToBetterString(),
-                    infoToLog.Hostname, infoToLog.UserId,
+        
                     infoToLog.UserName, infoToLog.CorrelationId,
                     infoToLog.AdditionalInfo
                     );
@@ -152,7 +151,6 @@ namespace C3logging.Core
                     infoToLog.Layer, infoToLog.Location,
                     infoToLog.Product, infoToLog.CustomException,
                     infoToLog.ElapsedMilliseconds, infoToLog.Exception?.ToBetterString(),
-                    infoToLog.Hostname, infoToLog.UserId,
                     infoToLog.UserName, infoToLog.CorrelationId,
                     infoToLog.AdditionalInfo
                     );
@@ -172,7 +170,7 @@ namespace C3logging.Core
                     infoToLog.Layer, infoToLog.Location,
                     infoToLog.Product, infoToLog.CustomException,
                     infoToLog.ElapsedMilliseconds, infoToLog.Exception?.ToBetterString(),
-                    infoToLog.Hostname, infoToLog.UserId,
+        
                     infoToLog.UserName, infoToLog.CorrelationId,
                     infoToLog.AdditionalInfo
                     );
