@@ -102,7 +102,7 @@ namespace C3logging.Core
             return colOptions;
         }
 
-        public static void WritePerf(C3loglogDetail infoToLog)
+        public static void WritePerf(C3logDetail infoToLog)
         {
             //_perfLogger.Write(LogEventLevel.Information, "{@C3oglogDetail}", infoToLog);
             _perfLogger.Write(LogEventLevel.Information,
@@ -117,7 +117,7 @@ namespace C3logging.Core
                     infoToLog.AdditionalInfo
                     );
         }
-        public static void WriteUsage(C3loglogDetail infoToLog)
+        public static void WriteUsage(C3logDetail infoToLog)
         {
             //_usageLogger.Write(LogEventLevel.Information, "{@C3oglogDetail}", infoToLog);
             
@@ -134,7 +134,7 @@ namespace C3logging.Core
                     infoToLog.AdditionalInfo
                     );
         }
-        public static void WriteError(C3loglogDetail infoToLog)
+        public static void WriteError(C3logDetail infoToLog)
         {
             if (infoToLog.Exception != null)
             {
@@ -155,7 +155,7 @@ namespace C3logging.Core
                     infoToLog.AdditionalInfo
                     );
         }
-        public static void WriteDiagnostic(C3loglogDetail infoToLog)
+        public static void WriteDiagnostic(C3logDetail infoToLog)
         {
             var writeDiagnostics = Convert.ToBoolean(ConfigurationManager.AppSettings["EnableDiagnostics"]);
             if (!writeDiagnostics)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace C3logging.Core
 {
-    public class C3loglogDetail
+    public class C3logDetail
     {
         //public FlogDetail()
         //{

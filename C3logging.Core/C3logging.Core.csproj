@@ -63,7 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C3loglogDetail.cs" />
+    <Compile Include="C3logDetail.cs" />
     <Compile Include="CustomException.cs" />
     <Compile Include="ExceptionHelper.cs" />
     <Compile Include="C3logger.cs" />

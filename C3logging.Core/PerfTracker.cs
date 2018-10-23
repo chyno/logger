@@ -8,13 +8,13 @@ namespace C3logging.Core
     public class PerfTracker
     {
         private readonly Stopwatch _sw;
-        private readonly C3loglogDetail _infoToLog;
+        private readonly C3logDetail _infoToLog;
 
         public PerfTracker(string name, string userId, string userName,
                    string location, string product, string layer)
         {
             _sw = Stopwatch.StartNew();
-            _infoToLog = new C3loglogDetail()
+            _infoToLog = new C3logDetail()
             {
                 Message = name,
                 UserName = userName,
